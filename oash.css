@@ -1,0 +1,222 @@
+body {
+    box-sizing: border-box;
+    background-color: var(--bane);
+    font-family: Abeezee, sans-serif;
+    color: var(--doo);
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+:root {
+    --doo: #555555;
+    --bane: #f5f5f5;
+    --lheeah: #DDDDDD;
+    --jiarg: rgba(255, 69, 0);
+    --gorrym: rgba(0, 191, 255);
+    --glass: #B3D334;
+    --orange: orange;
+    --mooadys-killeen: 15vw;
+    --yrjys-ogher: 2rem;
+    --lheead-ogher: 9%;
+    --cheeid-oirr: 2px;
+    --corneillyn: 5px;
+}
+
+#screeyn-laadey {
+    position: fixed;
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    background-color: var(--doo);
+    color: var(--bane);
+    top: 0;
+    left: 0;
+    font-size: 1.5rem;
+    width: 100dvw;
+    height: 100dvh;
+    z-index: 2;
+}
+
+#fysseree {
+    position: fixed;
+    visibility: hidden;
+    color: var(--bane);
+    background-color: var(--doo);
+    top: 1rem;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 1rem;
+    border-radius: var(--corneillyn);
+    z-index: 1;
+}
+
+#ard-haagh {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#saagh-baare {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: .5rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#saagh-mean {
+    width: 100%;
+    margin-top: .5rem;
+}
+
+#moggyl {
+    grid-template-rows: repeat(6, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: .2rem;
+    font-size: 1.5rem;
+}
+
+.strane {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 100%;
+    justify-items: center;
+    gap: .2rem;
+    height: var(--mooadys-killeen);
+    max-height: 60px;
+}
+
+.killeen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--mooadys-killeen);
+    max-width: 60px;
+    height: 100%;
+    border: 2px solid var(--lheeah);
+}
+
+#saagh-bun {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+#boayrd-ogher {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    justify-items: center;
+    gap: .2rem;
+    font-size: 1.3rem;
+    padding: 1rem;
+}
+
+.linney {
+    width: 100%;
+    height: 3.5rem;
+    max-height: 100px;
+    display: flex;
+    gap: .2rem;
+    justify-content: center;
+}
+
+.ogher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    height: 100%;
+    background-color: var(--lheeah);
+    border-radius: var(--corneillyn);
+}
+
+.ogher:hover {
+    cursor: pointer;
+}
+
+#ogher-backspace {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.lettyr {
+    width: var(--lheead-ogher);
+    min-width: 1.6rem;
+}
+
+.neu-chiart {
+    color: var(--bane);
+    background-color: var(--jiarg);
+}
+
+.bunnys {
+    background-color: var(--orange);
+}
+
+.kiart {
+    background-color: var(--glass);
+}
+
+.chyndaa {
+    animation: chyndaa-killeen 0.4s ease-in-out;
+    -webkit-animation: chyndaa-killeen 0.4s ease-in-out;
+}
+
+@keyframes chyndaa-killeen {
+    0% {transform: scaleY(1);}
+    50% {transform: scaleY(0);}
+    100% {transform: scaleY(1);}
+}
+
+.craa {
+    animation: craa .4s ease-in-out;
+    -webkit-animation: craa .4s ease-in-out;
+}
+
+.brooit {
+    background-color: darkgray;
+}
+
+@keyframes craa {
+    0% {transform: translate(-1%);}
+    20% {transform: translate(1%);}
+    40% {transform: translate(-1%);}
+    60% {transform: translate(1%);}
+    80% {transform: translate(-1%);}
+    100% {transform: translate(-0%);}
+}
+
+.fioghey {
+    animation: fioghey 1s ease-in;
+    -webkit-animation: fioghey 1s ease-in;
+}
+
+@keyframes fioghey {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@media only screen and (min-height: 800px) and (max-width: 1024px) {
+    #saagh-baare {
+        margin-top: 2rem;
+    }
+    
+    #saagh-mean {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+}
