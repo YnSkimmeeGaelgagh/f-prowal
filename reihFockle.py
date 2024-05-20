@@ -1873,8 +1873,8 @@ def reihFockle ():
     focklynRoie.close()
 
 # schedule.every().day.at("00:00").do(reihFockle)
-schedule.every(10).seconds.do(reihFockle)
+# schedule.every(10).seconds.do(reihFockle)
 
-while True:
-    schedule.run_pending()
-    time.sleep(1)
+# while True:
+#     schedule.run_pending()
+#     time.sleep(1)
