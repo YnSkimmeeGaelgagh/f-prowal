@@ -9,27 +9,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      name: checkout repo content
-      uses: actions/checkout@v2
+      - name: checkout repo content
+        uses: actions/checkout@v2
 
-      name: setup python
-      uses: actions/setup-python@v3
-      with:
-        python-version: '3.12'
+      - name: setup python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.12'
 
-      name: exectute py script
-      env: FOLLIAGHT ${{secrets.FOLLIAGHT}}
-      run: python reihFockle.py
+      - name: exectute py script
+        env: FOLLIAGHT ${{secrets.FOLLIAGHT}}
+        run: python reihFockle.py
 
-      name: commit files
-      run: |
-        git config --local user.email "peter.crellin@sch.im"
-        git config --local user.name "ynskimmeegaelgagh"
-        git add -A
-        git diff-index --quiet HEAD || (git commit -a -m "updated logs"  --allow empty)
+      - name: commit files
+        run: |
+          git config --local user.email "peter.crellin@sch.im"
+          git config --local user.name "ynskimmeegaelgagh"
+          git add -A
+          git diff-index --quiet HEAD || (git commit -a -m "updated logs"  --allow empty)
 
-      name: push changes
-      uses: ad-m/github-push-actions@v0.6.0
-      with: 
-        github_token: FOLLIAGHT ${{secrets.FOLLIAGHT}}
-        branch: main
+      - name: push changes
+        uses: ad-m/github-push-actions@v0.6.0
+        with: 
+          github_token: FOLLIAGHT ${{secrets.FOLLIAGHT}}
+          branch: main
