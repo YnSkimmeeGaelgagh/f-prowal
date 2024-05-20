@@ -23,12 +23,12 @@ jobs:
 
       name: commit files
       run: |
-        git config --local user.email "post-l"
-        git config --local user.name "ennym"
+        git config --local user.email "peter.crellin@sch.im"
+        git config --local user.name "ynskimmeegaelgagh"
         git add -A
         git diff-index --quiet HEAD || (git commit -a -m "updated logs"  --allow empty)
 
       name: push changes
       uses: ad-m/github-push-actions@v0.6.0
-        with: github_token ${{ secrets.GITHUB_TOKEN }}
+        with: FOLLIAGHT ${{secrets.FOLLIAGHT}}
         branch: main
