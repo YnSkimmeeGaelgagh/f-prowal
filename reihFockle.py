@@ -1,6 +1,9 @@
+import os
 import random
 import schedule
 import time
+
+FOLLIAGHT = os.environ['FOLLIAGHT']
 
 focklyn = (
     "aaght",
