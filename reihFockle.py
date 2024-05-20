@@ -1,7 +1,7 @@
 import os
 import random
-import schedule
-import time
+# import schedule
+# import time
 
 FOLLIAGHT = os.environ['FOLLIAGHT']
 
@@ -1871,6 +1871,8 @@ def reihFockle ():
     focklynRoie = open("focklynRoie.txt", "a")
     focklynRoie.write(fockle + ",")
     focklynRoie.close()
+
+reihFockle()
 
 # schedule.every().day.at("00:00").do(reihFockle)
 # schedule.every(10).seconds.do(reihFockle)
