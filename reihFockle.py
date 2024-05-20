@@ -4,7 +4,7 @@ import random
 # import time
 
 FOLLIAGHT = os.environ['FOLLIAGHT']
-
+print("hi")
 focklyn = (
     "aaght",
     "aajey",
