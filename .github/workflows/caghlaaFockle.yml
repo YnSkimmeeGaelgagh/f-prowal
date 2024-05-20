@@ -30,6 +30,6 @@ jobs:
 
       name: push changes
       uses: ad-m/github-push-actions@v0.6.0
-        with: 
-          github_token: FOLLIAGHT ${{secrets.FOLLIAGHT}}
-          branch: main
+      with: 
+        github_token: FOLLIAGHT ${{secrets.FOLLIAGHT}}
+        branch: main
