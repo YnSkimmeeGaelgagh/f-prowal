@@ -20,7 +20,8 @@ jobs:
           python-version: '3.12'
 
       - name: exectute py script
-        env: FOLLIAGHT ${{secrets.FOLLIAGHT}}
+        env:
+          FOLLIAGHT: ${{secrets.FOLLIAGHT}}
         run: python reihFockle.py
 
       - name: commit files
@@ -33,5 +34,5 @@ jobs:
       - name: push changes
         uses: ad-m/github-push-actions@v0.6.0
         with: 
-          github_token: FOLLIAGHT ${{secrets.FOLLIAGHT}}
+          github_token: ${{secrets.FOLLIAGHT}}
           branch: main
