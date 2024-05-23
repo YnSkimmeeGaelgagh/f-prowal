@@ -23,6 +23,14 @@ jobs:
         env:
           FOLLIAGHT: ${{ secrets.FOLLIAGHT }}
         run: python reihFockle.py
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "peter.crellin@sch.im"
+          git config --local user.name "ynskimmeegaelgagh"
+          git add -A
+          git commit -m "word changed"
+          git push
 # 
       # - name: commit files
       #   run: |
