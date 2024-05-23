@@ -21,7 +21,7 @@ jobs:
 
       - name: exectute py script
         env:
-          FOLLIAGHT: ${{secrets.FOLLIAGHT}}
+          FOLLIAGHT: ${{ secrets.FOLLIAGHT }}
         run: python reihFockle.py
 
       - name: commit files
@@ -29,10 +29,10 @@ jobs:
           git config --local user.email "peter.crellin@sch.im"
           git config --local user.name "ynskimmeegaelgagh"
           git add -A
-          git diff-index --quiet HEAD || (git commit -a -m "updated logs"  --allow empty)
+          git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow empty)
 
       - name: GitHub Push   
         uses: ad-m/github-push-action@v0.8.0
-          with:
-            github_token: ${{secrets.FOLLIAGHT}}
-            branch: main
+        with:
+          github_token: ${{ secrets.FOLLIAGHT }}
+          branch: main
