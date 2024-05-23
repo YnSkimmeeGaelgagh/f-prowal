@@ -1,8 +1,8 @@
 name: run reihFockle.py
 
-on:
-  schedule:
-    - cron: '*/6 * * * *'
+# on:
+#   schedule:
+#     - cron: '*/6 * * * *'
 
 permissions: write-all
 
