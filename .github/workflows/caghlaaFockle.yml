@@ -23,16 +23,16 @@ jobs:
         env:
           FOLLIAGHT: ${{ secrets.FOLLIAGHT }}
         run: python reihFockle.py
+# 
+      # - name: commit files
+      #   run: |
+      #     git config --local user.email "peter.crellin@sch.im"
+      #     git config --local user.name "ynskimmeegaelgagh"
+      #     git add -A
+      #     git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow empty)
 
-      - name: commit files
-        run: |
-          git config --local user.email "peter.crellin@sch.im"
-          git config --local user.name "ynskimmeegaelgagh"
-          git add -A
-          git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow empty)
-
-      - name: GitHub Push   
-        uses: ad-m/github-push-action@v0.8.0
-        with:
-          github_token: ${{ secrets.FOLLIAGHT }}
-          branch: main
+      # - name: GitHub Push   
+      #   uses: ad-m/github-push-action@v0.8.0
+      #   with:
+      #     github_token: ${{ secrets.FOLLIAGHT }}
+      #     branch: main
