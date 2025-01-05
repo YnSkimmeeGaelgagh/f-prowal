@@ -1,1 +1,1 @@
-oolid
+trait
